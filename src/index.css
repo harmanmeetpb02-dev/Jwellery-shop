@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0B0B0B;
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-dark: #C5A85C;
+  --color-brand-gold-light: #F3E5AB;
+  --color-brand-ivory: #FAF8F3;
+  --color-brand-gray: #2C2C2C;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Jost", "Inter", sans-serif;
+
+  --tracking-widest: 0.25em;
+  --tracking-mega: 0.40em;
+  --tracking-ultra: 0.50em;
+
+  --animate-spin-slow: spin 25s linear infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float-slow: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  --shadow-luxury: 0 10px 50px -12px rgba(212, 175, 55, 0.12);
+  --shadow-luxury-inner: inset 0 2px 20px 0 rgba(212, 175, 55, 0.05);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0B0B0B;
+  color: #FAF8F3;
+  font-family: 'Jost', 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  /* Hide default cursor to enable custom luxury cursor */
+}
+
+/* Enable normal cursor on touch devices */
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A85C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Luxury selection text colors */
+::selection {
+  background: #D4AF37;
+  color: #0B0B0B;
+}
+
+/* Premium Typography utilities */
+.editorial-title {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.luxury-text-glow {
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.glassmorphic {
+  background: rgba(11, 11, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.glassmorphic-light {
+  background: rgba(250, 248, 243, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.04);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FAF8F3 0%, #D4AF37 50%, #C5A85C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+}
+
+/* Custom transitions and states */
+.transition-luxury {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-line {
+  position: absolute;
+  left: -25px;
+  width: 1px;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: -41px;
+  }
+}
+
+.text-stroke-gold {
+  -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
+  color: transparent;
+}
+
+/* Hide App.css style imports or default resets that conflict */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
