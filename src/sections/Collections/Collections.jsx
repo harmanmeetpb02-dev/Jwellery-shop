@@ -9,12 +9,12 @@ import { COLLECTIONS } from '../../data/luxuryData';
  */
 export default function Collections() {
   
-  // Custom grid layouts mapping for the editorial asymmetrical look
+  // Symmetrical heights with alternating column spans for a clean editorial grid
   const gridClasses = [
-    "lg:col-span-7 h-[420px] md:h-[550px]", // Rings: Large main landscape
-    "lg:col-span-5 h-[320px] md:h-[400px] lg:mt-32", // Necklaces: High offset block
-    "lg:col-span-5 h-[380px] md:h-[480px] lg:-mt-16", // Earrings: Low offset block
-    "lg:col-span-7 h-[380px] md:h-[480px] lg:-mt-0", // Bracelets: Base structural landscape
+    "lg:col-span-7 h-[380px] md:h-[480px]", // Rings
+    "lg:col-span-5 h-[380px] md:h-[480px]", // Necklaces
+    "lg:col-span-5 h-[380px] md:h-[480px]", // Earrings
+    "lg:col-span-7 h-[380px] md:h-[480px]", // Bracelets
   ];
 
   return (
